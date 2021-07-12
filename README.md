@@ -310,10 +310,10 @@ If there is another AndroidManifest.xml file in the project and the AndroidManif
 
     - Here is an example of an approval request email:   
     <br/>
-    Contents : help@zenaad.com   
-    Company Info : ZenaAD account email (required): ex) publisher@zenaad.com    
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Company Name (required): ex) ZenaAD Co., Ltd.   
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; App Name (required):  A searchable name in the Store, if   
+    Contents : help@zenaad.com <br/>
+    Company Info : ZenaAD account email (required): ex) publisher@zenaad.com <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Company Name (required): ex) ZenaAD Co., Ltd. <br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; App Name (required):  A searchable name in the Store, if <br/>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Store Address (optional): Valid URL Address
 
 <br/><br/>

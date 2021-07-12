@@ -310,11 +310,11 @@ Zena2D SDK 의 .aar 패키지 내에 AndroidManifest.xml 파일을 포함하고 
 
     - 다음은 승인요청 메일 예시입니다.   
     <br/>
-        수신 : help@zenaad.com   
-        내용 : 제나애드 계정 이메일 (필수) : 예) publisher@zenaad.com   
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 회사명 (필수) : 예) (주)제나애드   
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 앱 이름 (필수) : 될 수 있으면 스토어에서 검색 가능한 이름   
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 스토어 주소 (선택) : 유효한 URL 주소
+    수신 : help@zenaad.com   
+    내용 : 제나애드 계정 이메일 (필수) : 예) publisher@zenaad.com   
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 회사명 (필수) : 예) (주)제나애드   
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 앱 이름 (필수) : 될 수 있으면 스토어에서 검색 가능한 이름   
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 스토어 주소 (선택) : 유효한 URL 주소
 
 <br/><br/>
 

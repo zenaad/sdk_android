@@ -2,7 +2,7 @@
 
 1. [Overview](#1-overview)
 
-2. [Create an ad in the Zenaad web console and add an "Ad ID"](#2-create-an-ad-in-the-zenaad-web-console-and-add-an-"ad-id")
+2. [Create an ad in the Zenaad web console and add an Ad ID](#2-create-an-ad-in-the-zenaad-web-console-and-add-an-ad-id)
 
 3. [SDK Installation](#3-sdk-installation)
     * Project Setting
@@ -46,7 +46,7 @@ console must be obtained separately.
 
 <br/><br/>
 
-## 2. create an ad in-the zenaad web console and add an "ad id"
+## 2. create an ad in the zenaad web console and add an ad id
 ---
 <br/>
 

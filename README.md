@@ -19,7 +19,7 @@
     * Show Ad
     * Position the banner
     * Remove banner
-    * ZenaAD Page (Cryptocurrency)
+    * ZenaAD Page (VirtualAssets)
     * Code Sample
     * IListenerZena2d Callback
     * Callback Parameter List
@@ -158,7 +158,7 @@ If there is another AndroidManifest.xml file in the project and the AndroidManif
     ```
 <br/>
 
-* ZenaAD Page (Cryptocurrency)
+* ZenaAD Page (VirtualAssets)
 
     A callable menu must be provided in the in-game options window with a menu that allows for users to view/withdraw accumulated points.   
     Menu appearance and location are freely displayed in the in-game options window. (Feel free to use the button attached at the bottom of the example)

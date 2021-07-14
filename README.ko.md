@@ -174,8 +174,12 @@ Zena2D SDK 의 .aar 패키지 내에 AndroidManifest.xml 파일을 포함하고 
     <br/>
 
     - 버튼 다운로드
-
-       [![ButtonImgC](Image/wallet_c.png "버튼 이미지")](Image/wallet_c.png)  [![ButtonImgW](Image/wallet_w.png "버튼 이미지")](Image/wallet_w.png)
+    
+       <a href="https://github.com/zenaad/zenaadresources/blob/main/adIcon/wallet_c.png" target="_blank">
+       <img src="https://github.com/zenaad/zenaadresources/blob/main/adIcon/wallet_c.png?raw=true" width="150px" height="150px" title="버튼 이미지" alt="ButtonImgC"></a>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="https://github.com/zenaad/zenaadresources/blob/main/adIcon/wallet_w.png" target="_blank">
+       <img src="https://github.com/zenaad/zenaadresources/blob/main/adIcon/wallet_w.png?raw=true" width="150px" height="150px" title="버튼 이미지" alt="ButtonImgW"></a>
     
 <br/>
 

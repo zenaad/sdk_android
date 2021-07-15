@@ -122,7 +122,7 @@ If there is another AndroidManifest.xml file in the project and the AndroidManif
 
 * Request AD ready
     ```java
-    public void Zena2d.readyAd( Product, “BANNER ID or INTERSTITIAL ID or VIDEO ID” );
+    public void Zena2d.readyAd( Product, "BANNER ID or INTERSTITIAL ID or VIDEO ID" );
     // Product : Zena2d.BANNER, Zena2d.INTERSTITIAL, Zena2d.VIDEO
     // (Ad types : Banner Ad, Full-screen Ad, Video Ad)
     ```
@@ -192,7 +192,7 @@ If there is another AndroidManifest.xml file in the project and the AndroidManif
         super. onCreate ( savedInstanceState );
         …
         
-        String[] ids = { “BANNER ID”, “INTERSTITIAL ID”, “VIDEO ID” };
+        String[] ids = { "BANNER ID", "INTERSTITIAL ID", "VIDEO ID" };
 
         zena2d = Zena2d.getInstance( );
         zena2d.setBannerGravity( Banner.Mode.BOTTOM );

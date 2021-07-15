@@ -39,9 +39,9 @@
 
 * 실제 프로젝트 환경에 SDK 적용을 위한 가이드 문서입니다.
 
-* android API Level 19 이상의 환경에서 적용을 권장하며 제나애드 웹 콘솔에서 발급받은 “광고 ID” 및 최신 SDK 가 별도로 필요합니다.
+* android API Level 19 이상의 환경에서 적용을 권장하며 제나애드 웹 콘솔에서 발급받은 "광고 ID" 및 최신 SDK 가 별도로 필요합니다.
 
-* 샘플 프로젝트 실행시에는 실제 발급받은 “광고 ID”로 수정 후 실행해야 합니다.
+* 샘플 프로젝트 실행시에는 실제 발급받은 "광고 ID"로 수정 후 실행해야 합니다.
 
 <br/><br/>
 
@@ -53,7 +53,7 @@
 
 2. 광고 생성. (광고 관리 / 광고 생성)
 
-3. 생성된 광고에 “광고 ID”를 이용해 프로젝트 내에서 함수를 실행 할 수 있습니다.
+3. 생성된 광고에 "광고 ID"를 이용해 프로젝트 내에서 함수를 실행 할 수 있습니다.
 
 <br/><br/>
 
@@ -122,7 +122,7 @@ Zena2D SDK 의 .aar 패키지 내에 AndroidManifest.xml 파일을 포함하고 
 
 * 광고 준비요청
     ```java
-    public void Zena2d.readyAd( Product, “BANNER ID or INTERSTITIAL ID or VIDEO ID” );
+    public void Zena2d.readyAd( Product, "BANNER ID or INTERSTITIAL ID or VIDEO ID" );
     // Product : Zena2d.BANNER, Zena2d.INTERSTITIAL, Zena2d.VIDEO
     // (광고종류 : 배너광고, 전면광고, 동영상광고)
     ```
@@ -192,7 +192,7 @@ Zena2D SDK 의 .aar 패키지 내에 AndroidManifest.xml 파일을 포함하고 
         super. onCreate ( savedInstanceState );
         …
         
-        String[] ids = { “BANNER ID”, “INTERSTITIAL ID”, “VIDEO ID” };
+        String[] ids = { "BANNER ID", "INTERSTITIAL ID", "VIDEO ID" };
 
         zena2d = Zena2d.getInstance( );
         zena2d.setBannerGravity( Banner.Mode.BOTTOM );

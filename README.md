@@ -19,7 +19,6 @@
     * Show Ad
     * Position the banner
     * Remove banner
-    * ZenaAD Page (VirtualAssets)
     * Code Sample
     * IListenerZena2d Callback
     * Callback Parameter List
@@ -68,20 +67,18 @@ A Compressed zip file containing a sampleGuide and .aar (AndroidArchiveLibrary) 
 
     1. Unzip the zip file to see the .arr file.
 
-    2. Run AndroidStudio to open your project and select File-> New-> New Module.
+    2. Run Android -> Project in Project View in the same way that AndroidStudio is launched.
 
-    3. When the New Module window opens, select Import .JAR/.AAR Package, specify the path to the .aar file, and then click Finish.
+        <img src="Image/project.png" width="410px" height="505px" title="프로젝트 뷰" alt="projectView"></img>
 
-    4. Notice that the aos_zena2d_sdk-x.x.x module has been added in the Project window.
+    3. Move the .aar file to the libs directory.
 
-    5. Select File -> Project Structure, select the Dependencies tab, click the plus button, and select 3 Module dependencies to display the aos_zena2d_sdk-x.x.x module.   
-    Select it and press OK. (or within dependencies of build.gradle(Module) file Add implementation project(path: ’ aos_zena2d_sdk-x.x.x’) directly. )
+    4. Add implementation files('libs/aos_zena2d_sdk-x.x.x.aar') to the dependencies section of your build.gradle file. (The file you just moved to libs.)
 
-    6.  Zena2d also requires an exoPlayer:2.6.0 module. select File -> Project Structure, select the Dependencies tab, click the plus button, and select 1 Library dependencies.   
-    Enter com.google.android.exoplayer:exoplayer-core:2.6.0 and press OK. (Even if it does not appear in the search list, press OK after input.)
+    5. Since Zena2d utilizes exoPlayer:2.16.1 , the exoPlayer module is also required.   
+    Add implementation 'com.google.android.exoplayer:exoplayer:2.16.1' to the dependencies entry in your build.gradle file.
 
-        After the above steps implementation project(‘:aos_zena2d_sdk-release’) and   
-        implementation ‘com.google.android.exoplayer:exoplayer-core:2.6.0’ are added to the dependencies item in the build.gradle file.
+    6. Click Sync Now to reflect the changes in build.gradle.
 
     7. You are now ready to use sdk.
 
@@ -156,31 +153,6 @@ If there is another AndroidManifest.xml file in the project and the AndroidManif
     ```java
     public void Zena2d.removeBanner( );
     ```
-<br/>
-
-* ZenaAD Page (VirtualAssets)
-
-    A callable menu must be provided in the in-game options window with a menu that allows for users to view/withdraw accumulated points.   
-    Menu appearance and location are freely displayed in the in-game options window. (Feel free to use the button attached at the bottom of the example)
-    ```java
-    public void Zena2d.createPointWindow( );
-    ```
-    <br/>
-
-    - Example
-
-        <img src="Image/sample.JPG" width="371px" height="387px" title="Example" alt="sampleImage"></img>
-
-    <br/>
-
-    - Button Download
-    
-       <a href="https://github.com/zenaad/zenaadresources/blob/main/adIcon/wallet_c.png" target="_blank">
-       <img src="https://github.com/zenaad/zenaadresources/blob/main/adIcon/wallet_c.png?raw=true" width="150px" height="150px" title="Button Image" alt="ButtonImgC"></a>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <a href="https://github.com/zenaad/zenaadresources/blob/main/adIcon/wallet_w.png" target="_blank">
-       <img src="https://github.com/zenaad/zenaadresources/blob/main/adIcon/wallet_w.png?raw=true" width="150px" height="150px" title="Button Image" alt="ButtonImgW"></a>
-    
 <br/>
 
 * Code Sample

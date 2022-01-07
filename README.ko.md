@@ -19,7 +19,6 @@
     * 광고 보이기
     * 배너 위치 지정
     * 배너 제거
-    * 제나애드 페이지 (가상자산)
     * 코드 샘플
     * IListenerZena2d 콜백
     * 콜백 매개변수 목록
@@ -67,21 +66,18 @@
 
     1. zip 파일을 압축 해제하여 .aar 파일을 확인합니다.
 
-    2. AndroidStudio 를 실행하여 sdk 를 설치할 프로젝트를 열고 File -> New -> New Module 선택합니다.
+    2. AndroidStudio 를 실행하여 sdk 를 설치할 프로젝트를 열고 Project 뷰의 보기 형태를 Android -> Project로 변경 후 app 하위에 libs 디렉토리를 생성합니다.
 
-    3. New Module 창이 열리면 import .JAR/.ARR Package 를 선택하고 .aar 파일의 경로를 지정한 후 finish 를 누릅니다.
+        <img src="Image/project.png" width="410px" height="505px" title="프로젝트 뷰" alt="projectView"></img>
 
-    4. Project 창에서 aos_zena2d_sdk-x.x.x 모듈이 추가된 것을 확인합니다.
+    3. libs 디렉토리에 .aar 파일을 이동시킵니다.
 
-    5. File -> Project Structure 선택 후 Dependencies 탭을 선택, 우측 +버튼, 3 Module dependencies 를 선택하면 aos_zena2d_sdk-x.x.x 모듈이 보입니다.   
-    선택하고 OK 를 누릅니다. (또는 build.gradle(Module) 파일의 dependencies 내에 implementation project(path: ‘:aos_zena2d_sdk-x.x.x’) 직접추가. )
+    4. build.gradle 파일의 dependencies 항목에 implementation files('libs/aos_zena2d_sdk-x.x.x.aar') 을 추가 합니다. (방금 libs로 이동시킨 파일.)
 
-    6. Zena2d 에서는 exoPlayer:2.6.0 을 활용하기 때문에 exoPlayer 모듈도 필요합니다.   
-    다시 File -> Project Structure 선택 후 Dependencies 탭을 선택, 우측 +버튼, 1 Library dependencies 를 선택합니다.   
-    com.google.android.exoplayer:exoplayer-core:2.6.0 를 입력 후 OK 를 누릅니다. (검색목록에 나오지 않아도 입력 후 OK 를 누르면 됩니다.)
+    5. Zena2d 에서는 exoPlayer:2.16.1 을 활용하기 때문에 exoPlayer 모듈도 필요합니다.   
+    build.gradle 파일의 dependencies 항목에 implementation 'com.google.android.exoplayer:exoplayer:2.16.1' 을 추가합니다.
 
-        위 과정을 거치면 build.gradle 파일의 dependencies 항목에 implementation project(path: ‘:aos_zena2d_sdk-x.x.x’) 와   
-        implementation ‘com.google.android.exoplayer:exoplayer-core:2.6.0’ 이 추가되어 있습니다.
+    6. Sync Now 를 클릭하면 변경된 build.gradle 내용이 반영됩니다.
 
     7. 이제 sdk 를 사용할 준비가 끝났습니다.
 
@@ -156,31 +152,6 @@ Zena2D SDK 의 .aar 패키지 내에 AndroidManifest.xml 파일을 포함하고 
     ```java
     public void Zena2d.removeBanner( );
     ```
-<br/>
-
-* 제나애드 페이지 (가상자산)
-
-    유저에게 적립된 포인트를 확인/출금 할 수 있는 창으로 게임내 옵션창에 호출 가능한 메뉴를 제공해야 합니다.   
-    메뉴의 모양 및 위치는 게임내 옵션창에 자유롭게 노출합니다. (적용 예시 하단에 첨부되어 있는 버튼 사용 가능)
-    ```java
-    public void Zena2d.createPointWindow( );
-    ```
-    <br/>
-
-    - 적용 예시
-
-        <img src="Image/sample.JPG" width="371px" height="387px" title="적용 예시" alt="sampleImage"></img>
-
-    <br/>
-
-    - 버튼 다운로드
-    
-       <a href="https://github.com/zenaad/zenaadresources/blob/main/adIcon/wallet_c.png" target="_blank">
-       <img src="https://github.com/zenaad/zenaadresources/blob/main/adIcon/wallet_c.png?raw=true" width="150px" height="150px" title="버튼 이미지" alt="ButtonImgC"></a>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <a href="https://github.com/zenaad/zenaadresources/blob/main/adIcon/wallet_w.png" target="_blank">
-       <img src="https://github.com/zenaad/zenaadresources/blob/main/adIcon/wallet_w.png?raw=true" width="150px" height="150px" title="버튼 이미지" alt="ButtonImgW"></a>
-    
 <br/>
 
 * 코드 샘플

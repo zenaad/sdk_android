@@ -18,7 +18,9 @@
     * Confirm ad ready
     * Show Ad
     * Position the banner
+    * Size the banner
     * Remove banner
+    * Check version
     * Code Sample
     * IListenerZena2d Callback
     * Callback Parameter List
@@ -101,8 +103,24 @@ If there is another AndroidManifest.xml file in the project and the AndroidManif
 
 * If ads are not visible after applying Proguard Please add the following option to your ```proguard-rules.pro``` file.
     ```
-    -keep class com.rhaon.aos_zena2d_sdk.**
-    -keep interface com.rhaon.aos_zena2d_sdk.**
+    -keep class com.rhaon.aos_zena2d_sdk.Zena2d {
+        public static final int BANNER;
+        public static final int INTERSTITIAL;
+        public static final int VIDEO;
+        public <methods>;
+    }
+
+    -keep interface com.rhaon.aos_zena2d_sdk.listener.IListenerZena2d {
+        public <methods>;
+    }
+
+    -keep class com.rhaon.aos_zena2d_sdk.Banner {
+        public <methods>;
+    }
+
+    -keep enum com.rhaon.aos_zena2d_sdk.Banner$* {
+        public *;
+    }
     ```
 
 <br/><br/>
@@ -144,14 +162,28 @@ If there is another AndroidManifest.xml file in the project and the AndroidManif
 * Position the banner
     ```java
     public void Zena2d.setBannerGravity( Banner.Mode );
-    // Banner.Mode : Banner.Mode.BOTTOM, Banner.Mode.TOP, Banner.Mode.SOFT_KEY
-    // (Banner Position : Bottom, Top, Softkey_Top)
+    // Banner.Mode : Banner.Mode.BOTTOM, Banner.Mode.TOP
+    // (Banner Position : Bottom, Top)
+    ```
+<br/>
+
+* Size the banner
+    ```java
+    public void Zena2d.setBannerSize( Banner.Size );
+    // Banner.Size : Banner.Mode.ADAPTIVE, Banner.Mode.FIXED
+    // (Banner Size : fit, default)
     ```
 <br/>
 
 * Remove banner
     ```java
     public void Zena2d.removeBanner( );
+    ```
+<br/>
+
+* Check version
+    ```java
+    public void Zena2d.getVersion( );
     ```
 <br/>
 
@@ -167,6 +199,7 @@ If there is another AndroidManifest.xml file in the project and the AndroidManif
         String[] ids = { "BANNER ID", "INTERSTITIAL ID", "VIDEO ID" };
 
         zena2d = Zena2d.getInstance( );
+        zena2d.setBannerSize(Banner.Size.ADAPTIVE);
         zena2d.setBannerGravity( Banner.Mode.BOTTOM );
         zena2d.init( this, ids, new IListenerZena2d() {
             

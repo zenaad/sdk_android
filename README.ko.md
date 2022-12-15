@@ -18,7 +18,9 @@
     * 광고 준비확인
     * 광고 보이기
     * 배너 위치 지정
+    * 배너 크기 지정
     * 배너 제거
+    * 버전 확인
     * 코드 샘플
     * IListenerZena2d 콜백
     * 콜백 매개변수 목록
@@ -100,8 +102,24 @@ Zena2D SDK 의 .aar 패키지 내에 AndroidManifest.xml 파일을 포함하고 
 
 * Proguard 적용 후 광고가 보이지 않을 경우 ```proguard-rules.pro``` 파일에 아래 옵션을 추가해 주세요.
     ```
-    -keep class com.rhaon.aos_zena2d_sdk.**
-    -keep interface com.rhaon.aos_zena2d_sdk.**
+    -keep class com.rhaon.aos_zena2d_sdk.Zena2d {
+        public static final int BANNER;
+        public static final int INTERSTITIAL;
+        public static final int VIDEO;
+        public <methods>;
+    }
+
+    -keep interface com.rhaon.aos_zena2d_sdk.listener.IListenerZena2d {
+        public <methods>;
+    }
+
+    -keep class com.rhaon.aos_zena2d_sdk.Banner {
+        public <methods>;
+    }
+
+    -keep enum com.rhaon.aos_zena2d_sdk.Banner$* {
+        public *;
+    }
     ```
 
 <br/><br/>
@@ -143,14 +161,28 @@ Zena2D SDK 의 .aar 패키지 내에 AndroidManifest.xml 파일을 포함하고 
 * 배너 위치 지정
     ```java
     public void Zena2d.setBannerGravity( Banner.Mode );
-    // Banner.Mode : Banner.Mode.BOTTOM, Banner.Mode.TOP, Banner.Mode.SOFT_KEY
-    // (배너위치 : 하단, 상단, 소프트키 위)
+    // Banner.Mode : Banner.Mode.BOTTOM, Banner.Mode.TOP
+    // (배너위치 : 하단, 상단)
+    ```
+<br/>
+
+* 배너 크기 지정
+    ```java
+    public void Zena2d.setBannerSize( Banner.Size );
+    // Banner.Size : Banner.Mode.ADAPTIVE, Banner.Mode.FIXED
+    // (배너크기 : 화면 맞춤, 기본크기)
     ```
 <br/>
 
 * 배너 제거
     ```java
     public void Zena2d.removeBanner( );
+    ```
+<br/>
+
+* 버전 확인
+    ```java
+    public void Zena2d.getVersion( );
     ```
 <br/>
 
@@ -166,6 +198,7 @@ Zena2D SDK 의 .aar 패키지 내에 AndroidManifest.xml 파일을 포함하고 
         String[] ids = { "BANNER ID", "INTERSTITIAL ID", "VIDEO ID" };
 
         zena2d = Zena2d.getInstance( );
+        zena2d.setBannerSize(Banner.Size.ADAPTIVE);
         zena2d.setBannerGravity( Banner.Mode.BOTTOM );
         zena2d.init( this, ids, new IListenerZena2d() {
             

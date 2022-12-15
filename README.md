@@ -183,7 +183,7 @@ If there is another AndroidManifest.xml file in the project and the AndroidManif
 
 * Check version
     ```java
-    public void Zena2d.getVersion( );
+    public String Zena2d.getVersion( );
     ```
 <br/>
 

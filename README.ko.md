@@ -182,7 +182,7 @@ Zena2D SDK 의 .aar 패키지 내에 AndroidManifest.xml 파일을 포함하고 
 
 * 버전 확인
     ```java
-    public void Zena2d.getVersion( );
+    public String Zena2d.getVersion( );
     ```
 <br/>
 

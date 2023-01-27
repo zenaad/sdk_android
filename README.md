@@ -248,7 +248,7 @@ If there is another AndroidManifest.xml file in the project and the AndroidManif
                 Log.d( "zena2d", "onClose : " + product + " : " + medID );
                 
                 //ex : Close ad while preparing for next ad
-                zena2d.isReadyAd( product, medID );
+                zena2d.readyAd( product, medID );
             }
         });
     }

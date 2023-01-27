@@ -247,7 +247,7 @@ Zena2D SDK 의 .aar 패키지 내에 AndroidManifest.xml 파일을 포함하고 
                 Log.d( "zena2d", "onClose : " + product + " : " + medID );
                 
                 //ex : 광고 닫힘과 동시에 다음 광고준비
-                zena2d.isReadyAd( product, medID );
+                zena2d.readyAd( product, medID );
             }
         });
     }
